@@ -4,9 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
-*/
+/* Cream Themed Color Scheme */
+:root {
+  --primary-color: #ffebcd; /* Navajo White */
+  --secondary-color: #ffdab9; /* Peachpuff */
+  --accent-color: #ffe4b5; /* Moccasin */
+}
 
 .main {
   width: 100vw;
@@ -19,7 +22,7 @@
 }
 
 .main:before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, var(--primary-color) 100%);
   position: absolute;
   content: "";
   z-index: 2;
@@ -46,16 +49,14 @@
   width: 100%;
   max-width: 640px;
   background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
+      at 27% 37%, hsla(0, 70%, 80%, 1) 0px, transparent 0%
     ),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+    radial-gradient(at 97% 21%, hsla(0, 70%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(0, 70%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(0, 70%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(0, 70%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(0, 70%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(0, 70%, 80%, 1) 0px, transparent 50%);
   position: absolute;
   content: "";
   width: 100%;
@@ -71,7 +72,7 @@
   }
 }
 
-/* Tailwind Styles */
+/* Cream Themed Tailwind Styles */
 
 .app {
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
@@ -148,7 +149,7 @@
   @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
 }
 
-/* PromptCard Component */
+/* Cream Themed PromptCard Component */
 .prompt_card {
   @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
 }

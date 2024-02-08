@@ -69,16 +69,18 @@ const Feed = () => {
 
   return (
     <section className='feed'>
-      <form className='relative w-full flex-center'>
-        <input
-          type='text'
-          placeholder='Search for a tag or a username'
-          value={searchText}
-          onChange={handleSearchChange}
-          required
-          className='search_input peer'
-        />
-      </form>
+      <form className='relative w-full flex items-center'>
+  <input
+    type='text'
+    placeholder='Search for a tag or a username'
+    value={searchText}
+    onChange={handleSearchChange}
+    required
+    className='search_input peer p-2 border border-gray-300 rounded-md w-full focus:outline-none'
+  />
+</form>
+
+
 
       {/* All Prompts */}
       {searchText ? (
